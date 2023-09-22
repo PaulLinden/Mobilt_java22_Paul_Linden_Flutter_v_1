@@ -11,7 +11,7 @@ class _SecondPageState extends State<SecondPage> {
   double _sliderValue = 0.5; // Initial value
 
   Color getColorForSliderValue(double value) {
-    // Logic to determine color based on slider value
+
     if (value < 0.25) {
       return Colors.red;
     } else if (value < 0.5) {
@@ -31,7 +31,7 @@ class _SecondPageState extends State<SecondPage> {
       appBar: AppBar(
         title: const Text('Second Page'),
       ),
-      backgroundColor: backgroundColor, // Set the background color here
+      backgroundColor: backgroundColor,
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
