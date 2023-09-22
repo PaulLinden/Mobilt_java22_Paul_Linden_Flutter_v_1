@@ -4,10 +4,10 @@ class SecondPage extends StatefulWidget {
   const SecondPage({Key? key}) : super(key: key);
 
   @override
-  _SecondPageState createState() => _SecondPageState();
+  SecondPageState createState() => SecondPageState();
 }
 
-class _SecondPageState extends State<SecondPage> {
+class SecondPageState extends State<SecondPage> {
   double _sliderValue = 0.5; // Initial value
 
   Color getColorForSliderValue(double value) {

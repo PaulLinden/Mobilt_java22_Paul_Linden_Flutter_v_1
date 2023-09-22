@@ -9,7 +9,8 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key});
+  const MyApp({super.key});
+  
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +26,7 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key, required this.title});
+  const MyHomePage({super.key, required this.title});
 
   final String title;
 
@@ -36,7 +37,7 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
   String _textDisplayed = 'You have pushed the button this many times:';
-  TextEditingController _textFieldController = TextEditingController();
+  final TextEditingController _textFieldController = TextEditingController();
   String _savedText = '';
 
   @override
@@ -92,7 +93,7 @@ class _MyHomePageState extends State<MyHomePage> {
     // Använd tidigare sparat BuildContext här
     Navigator.push(
       savedContext!,
-      MaterialPageRoute(builder: (context) => SecondPage()),
+      MaterialPageRoute(builder: (context) => const SecondPage()),
     );
   }
 
@@ -139,7 +140,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             Text(
               'Saved Text: $_savedText',
-              style: TextStyle(fontSize: 20),
+              style: const TextStyle(fontSize: 20),
             ),
           ],
         ),
